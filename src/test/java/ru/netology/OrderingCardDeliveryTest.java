@@ -21,7 +21,7 @@ public class OrderingCardDeliveryTest {
     public void shouldOrderingCardDeliveryTest () {
         Selenide.open("http://localhost:9999");
         $("[data-test-id='city'] input").setValue("Санкт-Петербург");
-        String planningDate = generateDate(4, "dd.MM.yyyy");
+        String planningDate = generateDate(3, "dd.MM.yyyy");
         $("[data-test-id='date'] input").press(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         $("[data-test-id='date'] input").setValue(planningDate);
         $("[data-test-id='name'] input").setValue("Петров Петр");
